@@ -1,0 +1,103 @@
+msgid ""
+msgstr ""
+"POT-Creation-Date: Tue Aug 20 2019 02:33:26 GMT+0000 (Coordinated Universal Time)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: po-conv\n"
+"Language: ko\n"
+"Project-Id-Version: com.unity.learn.iet-framework@0.4.0-preview\n"
+
+msgid "All Tutorials"
+msgstr ""
+
+msgid "Back"
+msgstr ""
+
+msgid "Tutorial: "
+msgstr ""
+
+msgid "COMPLETED"
+msgstr ""
+
+msgid "Yes"
+msgstr ""
+
+msgid "No"
+msgstr ""
+
+msgid "OK"
+msgstr ""
+
+msgid "TUTORIAL"
+msgstr ""
+
+msgid "TUTORIALS"
+msgstr ""
+
+msgid "Tutorials"
+msgstr ""
+
+msgid "Show Tutorials"
+msgstr ""
+
+msgid "Return to Tutorials?"
+msgstr ""
+
+msgid "Returning to the Tutorial Selection means exiting the tutorial and losing all of your progress\nDo you wish to continue?"
+msgstr ""
+
+msgid "Close Tutorials"
+msgstr ""
+
+msgid "You can find Tutorials later by choosing {0} in the top menu."
+msgstr ""
+
+msgid "Skip To End"
+msgstr ""
+
+msgid "Preview Masking"
+msgstr ""
+
+msgid "Select Tutorial"
+msgstr ""
+
+msgid "Select Page"
+msgstr ""
+
+msgid "Run Startup Code"
+msgstr ""
+
+msgid "Localizable string"
+msgstr ""
+
+msgid "Tutorial Framework"
+msgstr ""
+
+msgid "Tutorial Window"
+msgstr ""
+
+msgid "Show info dialog when the window is closed"
+msgstr ""
+
+msgid "Editor Language Change Detected"
+msgstr ""
+
+msgid "It's recommended to restart the Editor for the language change to be applied fully."
+msgstr ""
+
+msgid "Restart"
+msgstr ""
+
+msgid "Continue without restarting"
+msgstr ""
+
+msgid "In-Editor Tutorials"
+msgstr ""
+
+msgid "Enable Masking and Highlighting"
+msgstr ""
+
+msgid "Master control for Masking and Highlighting"
+msgstr ""
