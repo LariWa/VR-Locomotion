@@ -15,7 +15,8 @@ public class QuantitiveEvaluator : MonoBehaviour
 
     private void Start()
     {
-      
+        prevPos = player.position;
+
     }
     private void FixedUpdate()
     {
