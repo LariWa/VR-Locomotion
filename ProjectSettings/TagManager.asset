@@ -7,6 +7,11 @@ TagManager:
   - TeleportIgnore
   - ExcludeTeleport
   - Collect
+  - projectile
+  - FxTemporaire
+  - Button
+  - Collect_A
+  - Collect_B
   layers:
   - Default
   - TransparentFX
