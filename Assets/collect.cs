@@ -8,11 +8,13 @@ public class collect : MonoBehaviour
 {
     public Button RouteA;
     public Button RouteB;
+    public Button RouteC;
     public Button test;
     public AudioClip magic;
 
     List<GameObject> collectItemsA = new List<GameObject>();
     List<GameObject> collectItemsB = new List<GameObject>();
+    List<GameObject> collectItemsC = new List<GameObject>();
     int count = 0;
 
     // Start is called before the first frame update
@@ -20,14 +22,19 @@ public class collect : MonoBehaviour
     {
       collectItems("Collect_A", collectItemsA);
       collectItems("Collect_B", collectItemsB);
+      collectItems("Collect_C", collectItemsC);
 
-      Button btnA = RouteA.GetComponent<Button>();
+        Button btnA = RouteA.GetComponent<Button>();
       Button btnB = RouteB.GetComponent<Button>();
-      Button btnTest = test.GetComponent<Button>();
+        Button btnC = RouteC.GetComponent<Button>();
+        Button btnTest = test.GetComponent<Button>();
 
       btnA.onClick.AddListener(delegate{selectRoute(collectItemsA);});
       btnB.onClick.AddListener(delegate{selectRoute(collectItemsB);});
-      btnTest.onClick.AddListener(hideUI);
+      btnC.onClick.AddListener(delegate {
+            selectRoute(collectItemsC);
+        });
+        btnTest.onClick.AddListener(hideUI);
 
     }
 
@@ -70,11 +77,16 @@ public class collect : MonoBehaviour
 
     void OnTriggerEnter(Collider col)
     {
-      Debug.Log("Hit");
-      if (col.gameObject.CompareTag("Collect_A") || col.gameObject.CompareTag("Collect_B")) {
+      if (col.gameObject.CompareTag("Collect_A") || col.gameObject.CompareTag("Collect_B") || col.gameObject.CompareTag("Collect_C")) {
         AudioSource.PlayClipAtPoint(magic, transform.position);
         Destroy(col.gameObject, (float) Convert.ToDouble("0.1"));
         count++;
       }
+
+       if (count == 5)
+       {
+           UnityEditor.EditorApplication.isPlaying = false;
+           // Application.Quit();
+        }
     }
 }

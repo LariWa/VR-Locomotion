@@ -8,7 +8,7 @@ public class QuantitiveEvaluator : MonoBehaviour
 {
     Vector3 prevPos;
     public Transform player;
-
+    public bool applicationStarted;
     List<float> speed = new List<float>();
     List<float> distance = new List<float>();
 
@@ -20,6 +20,7 @@ public class QuantitiveEvaluator : MonoBehaviour
     }
     private void FixedUpdate()
     {
+        if(applicationStarted)
        //Speed     
         speed.Add(getSpeed(player.position));
         distance.Add(getDistance(player.position));
@@ -27,7 +28,10 @@ public class QuantitiveEvaluator : MonoBehaviour
 
 
     }
-
+   public void applicationIsStarted()
+    {
+        applicationStarted = true;
+    }
     private float getSpeed(Vector3 currentPos)
     {
         float movementPerFixedUpdate = Vector3.Distance(prevPos, currentPos);

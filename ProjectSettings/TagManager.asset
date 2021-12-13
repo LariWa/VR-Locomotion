@@ -12,6 +12,7 @@ TagManager:
   - Button
   - Collect_A
   - Collect_B
+  - Collect_C
   layers:
   - Default
   - TransparentFX
