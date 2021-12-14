@@ -15,7 +15,9 @@ public class collect : MonoBehaviour
     List<GameObject> collectItemsA = new List<GameObject>();
     List<GameObject> collectItemsB = new List<GameObject>();
     List<GameObject> collectItemsC = new List<GameObject>();
-    int count = 0;
+    int countA = 0;
+    int countB = 0;
+    int countC = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -31,10 +33,8 @@ public class collect : MonoBehaviour
 
       btnA.onClick.AddListener(delegate{selectRoute(collectItemsA);});
       btnB.onClick.AddListener(delegate{selectRoute(collectItemsB);});
-      btnC.onClick.AddListener(delegate {
-            selectRoute(collectItemsC);
-        });
-        btnTest.onClick.AddListener(hideUI);
+      btnC.onClick.AddListener(delegate {selectRoute(collectItemsC);});
+      btnTest.onClick.AddListener(hideUI);
 
     }
 
@@ -77,16 +77,26 @@ public class collect : MonoBehaviour
 
     void OnTriggerEnter(Collider col)
     {
-      if (col.gameObject.CompareTag("Collect_A") || col.gameObject.CompareTag("Collect_B") || col.gameObject.CompareTag("Collect_C")) {
+      if (col.gameObject.CompareTag("Collect_A")) {
         AudioSource.PlayClipAtPoint(magic, transform.position);
         Destroy(col.gameObject, (float) Convert.ToDouble("0.1"));
-        count++;
+        countA++;
+        Debug.Log(countA);
       }
-
-       if (count == 5)
-       {
-           UnityEditor.EditorApplication.isPlaying = false;
-           // Application.Quit();
+      if (col.gameObject.CompareTag("Collect_B") )
+        {
+            AudioSource.PlayClipAtPoint(magic, transform.position);
+            Destroy(col.gameObject, (float)Convert.ToDouble("0.1"));
+            countB++;
+            Debug.Log(countB);
         }
+     if (col.gameObject.CompareTag("Collect_C"))
+        {
+            AudioSource.PlayClipAtPoint(magic, transform.position);
+            Destroy(col.gameObject, (float)Convert.ToDouble("0.1"));
+            countC++;
+            Debug.Log(countC);
+        }
+
     }
 }
